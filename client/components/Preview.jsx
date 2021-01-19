@@ -1,11 +1,13 @@
 import React from 'react';
 
+import styles from '../styles/Preview.module.css';
+
 import Zoom from './Zoom.jsx';
 import Carousel from './Carousel.jsx';
 
 const Preview = (props) => {
   return (
-    <div style={{display: "flex", flexDirection: "column"}}>
+    <div className={styles.preview}>
       <Zoom />
       <Carousel />
     </div>

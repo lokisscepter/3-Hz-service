@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import styles from './App.module.css';
+
 import Preview from './components/Preview.jsx';
 import Checkout from './components/Checkout.jsx';
 
@@ -25,11 +27,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{display: "flex", flexDirection: "row"}}>
+      <div className={styles.app}>
         <Preview />
         <Checkout />
       </div>
-    )
+    );
   }
 }
 

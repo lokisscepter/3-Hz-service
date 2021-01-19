@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Zoom = () => {
+const Zoom = (props) => {
   return (
     <div>
       Zoom
