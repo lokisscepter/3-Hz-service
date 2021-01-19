@@ -1,10 +1,13 @@
 const express = require('express');
+const path = require('path');
 const PORT = process.env.PORT || 6969;
 const Model = require('../db/model.js');
 
 const m = new Model;
 
 const app = express();
+
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.get('/api/items/:item_id/info', (req, res) => {
   m.getItem(req.params.item_id)
