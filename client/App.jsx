@@ -11,17 +11,27 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      info: null,
-      styles: null,
-      sizes: null,
-      photos: null,
-      current_style: null
+      info: {
+        id: '',
+        name: '',
+        brand: '',
+        avg_rating: '',
+        num_ratings: ''
+      },
+      styles: [],
+      sizes: [],
+      photos: [],
+      current_style: {},
+      current_size: ''
     };
 
     this.fetchInfo = this.fetchInfo.bind(this);
     this.fetchStyles = this.fetchStyles.bind(this);
     this.fetchSizes = this.fetchSizes.bind(this);
     this.fetchPhotos = this.fetchPhotos.bind(this);
+
+    this.clickStyle = this.clickStyle.bind(this);
+    this.clickSize = this.clickSize.bind(this);
   }
 
   randInt(min, max) {
@@ -76,7 +86,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let item = this.randInt(1, 12);
+    let item = this.randInt(1, 100);
+    let state = this.state;
     this.fetchInfo(item)
       .then(() => this.fetchStyles(item))
       .then(() => this.fetchSizes(item))
@@ -84,17 +95,33 @@ class App extends React.Component {
       .catch(err => console.log(err));
   }
 
+  clickStyle(style) {
+    this.setState({
+      current_style: style
+    });
+  }
+
+  clickSize(size) {
+    this.setState({
+      current_size: size
+    });
+  }
+
   render() {
     return (
       <div className={styles.app}>
         <Preview
           photos={this.state.photos}
-          style={this.state.current_style}
+          current_style={this.state.current_style}
         />
         <Checkout
           info={this.state.info}
           styles={this.state.styles}
           sizes={this.state.sizes}
+          current_style={this.state.current_style}
+          clickStyle={this.clickStyle}
+          current_size={this.state.current_size}
+          clickSize={this.clickSize}
         />
       </div>
     );

@@ -1,11 +1,6 @@
 body{
   display: block;
   margin: auto;
-  font-family: Graphik, Roboto, "Helvetica Neue", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -.016rem;
-  font-size: 1.6rem;
 }
 
 #product_container{

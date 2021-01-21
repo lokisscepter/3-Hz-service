@@ -9,8 +9,9 @@
   },
   "scripts": {
     "webpack-dev": "webpack --config dev.config.js",
-    "start-dev": "nodemon server/server.js",
-    "seed-db": "node db/seed.js"
+    "start-dev": "nodemon server/index.js",
+    "seed-db": "node db/seed.js",
+    "test": "jest --verbose"
   },
   "dependencies": {
     "axios": "^0.21.1",

@@ -1,4 +1,4 @@
 .app {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
 }

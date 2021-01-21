@@ -9,12 +9,4 @@ const connection = MySql.createConnection({
 
 const db = Promise.promisifyAll(connection, { multiArgs: true });
 
-db.connectAsync()
-  .then(result => {
-    console.log('MySQL: connected as id' + db.threadId);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-
 module.exports = db;
