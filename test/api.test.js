@@ -3,7 +3,7 @@ jest.mock('../server/server.js');
 
 
 beforeEach(() => {
-
+// tried spinning up server instances but unreturned promises and async callbacks made it impossible
 });
 
 
