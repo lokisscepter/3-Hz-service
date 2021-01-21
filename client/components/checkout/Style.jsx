@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Style.module.css';
+import styles from '../../styles/checkout/Style.module.css';
 
 const Style = (props) => {
   let price = props.style.price.toString();
@@ -14,7 +14,7 @@ const Style = (props) => {
 
   return (
     <span>
-      <span>${price}</span>
+      <span className={styles.price_text}>${price}</span>
       <div className={square_style} style={{background: props.style.color}} onClick={() => props.clickStyle(props.style)}></div>
     </span>
   );

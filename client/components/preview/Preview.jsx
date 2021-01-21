@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../styles/Preview.module.css';
+import styles from '../../styles/preview/Preview.module.css';
 
 import Zoom from './Zoom.jsx';
 import Carousel from './Carousel.jsx';

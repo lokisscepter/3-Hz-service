@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Size.module.css';
+import styles from '../../styles/checkout/Size.module.css';
 
 const Size = (props) => {
   let size_style;

@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.item_selector {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

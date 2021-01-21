@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import styles from './App.module.css';
 
-import Preview from './components/Preview.jsx';
-import Checkout from './components/Checkout.jsx';
+import Preview from './components/preview/Preview.jsx';
+import Checkout from './components/checkout/Checkout.jsx';
 
 class App extends React.Component {
   constructor(props) {
