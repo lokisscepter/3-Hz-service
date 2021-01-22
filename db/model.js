@@ -117,6 +117,16 @@ class Model {
       `))
   }
 
+  connect() {
+    return db.connectAsync()
+      .then(result => {
+        console.log('MySQL: connected as id' + db.threadId);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
   endConnection() {
     return db.endAsync();
   }

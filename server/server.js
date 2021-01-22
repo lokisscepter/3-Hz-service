@@ -1,10 +1,14 @@
 const express = require('express');
-const PORT = process.env.PORT || 6969;
+const path = require('path');
 const Model = require('../db/model.js');
 
 const m = new Model;
 
 const app = express();
+
+m.connect();
+
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.get('/api/items/:item_id/info', (req, res) => {
   m.getItem(req.params.item_id)
@@ -42,5 +46,4 @@ app.get('/api/items/:item_id/photos', (req, res) => {
   });
 })
 
-
-app.listen(PORT, () => console.log(`express is listening on port ${PORT}`));
+module.exports = app;

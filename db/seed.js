@@ -2,7 +2,7 @@ const faker = require('faker');
 const Model = require('./model.js');
 const photoBank = require('./data/photos.json');
 
-const NUM_ITEMS = 12;
+const NUM_ITEMS = 100;
 
 function rI(min, max) {
   min = Math.ceil(min);
