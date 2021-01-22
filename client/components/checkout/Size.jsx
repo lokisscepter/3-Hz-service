@@ -11,7 +11,7 @@ const Size = (props) => {
 
   if (props.available) {
     return (
-      <div className={size_style} style={{background: "white"}} onClick={() => props.clickSize(props.size)}>{props.size}</div>
+      <div className={size_style} style={{background: "white", cursor: "pointer"}} onClick={() => props.clickSize(props.size)}>{props.size}</div>
     )
   } else {
     return (

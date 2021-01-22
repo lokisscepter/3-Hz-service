@@ -1,0 +1,8 @@
+.star_container {
+  vertical-align: middle;
+}
+
+.empty_star {
+  max-width: 15px;
+  max-height: auto;
+}
