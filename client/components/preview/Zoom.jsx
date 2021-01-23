@@ -13,7 +13,7 @@ const Zoom = (props) => {
           onMouseMove={(e) => props.zoomIn(e)}
           onMouseOut={(e) => props.zoomOut(e)}
         /> */}
-        <ReactImageZoom className={styles.image} width={750} height={500} zoomWidth={400} img={photo.url_regular}/>
+        <ReactImageZoom className={styles.image} width={750} height={500} zoomWidth={400}  img={photo.url_regular}/>
       </div>
   );
 }
