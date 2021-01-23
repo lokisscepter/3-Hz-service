@@ -13,7 +13,7 @@ const Style = (props) => {
   }
 
   return (
-    <span>
+    <span className={styles.style_container}>
       <span className={styles.price_text}>${price}</span>
       <div className={square_style} style={{background: props.style.color}} onClick={() => props.clickStyle(props.style)}></div>
     </span>

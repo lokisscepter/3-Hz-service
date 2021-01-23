@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '../../styles/checkout/Checkout.module.css';
 
+import Preview from '../preview/Preview.jsx';
+
 import ItemInfo from './ItemInfo.jsx';
 import StyleList from './StyleList.jsx';
 import SizeList from './SizeList.jsx';
@@ -10,6 +12,8 @@ import Add from './Add.jsx';
 const Checkout = (props) => {
   return (
     <div className={styles.container}>
+
+      {/* <Preview photos={props.photos} c_i={props.c_i} current_style={props.current_style} preview={props.preview} posX={props.posX} posY={props.posY}/> */}
 
       <ItemInfo info={props.info} avg_rating={props.avg_rating} num_ratings={props.num_ratings} styles={props.styles}/>
 

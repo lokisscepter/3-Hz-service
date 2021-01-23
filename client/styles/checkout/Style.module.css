@@ -1,8 +1,8 @@
 .square_unselected {
-  min-width: 25px;
-  min-height: 25px;
-  max-width: 25px;
-  max-height: 25px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   border-width: 1px;
   border-radius: 2px;
   border-style: solid;
@@ -11,14 +11,14 @@
 }
 
 .square_selected {
-  min-width: 23px;
-  min-height: 23px;
-  max-width: 23px;
-  max-height: 23px;
-  border-width: 2px;
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
+  border-width: 3px;
   border-radius: 3px;
   border-style: solid;
-  border-color: black;
+  border-color: rgb(44, 76, 255);
   cursor: pointer;
 }
 
@@ -28,11 +28,15 @@
   font-family: Graphik,"Helvetica Neue",sans-serif;
   font-style: normal;
   letter-spacing: -.016rem;
-  line-height: 10px;
   color: rgba(12,11,8,.75);
   box-sizing: inherit;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: .9rem;
+  font-weight: 800;
+  line-height: .9rem;
+}
+
+.style_container {
+  padding-bottom: .2rem;
 }
 
 .style_list {
@@ -47,9 +51,10 @@
   touch-action: manipulation;
   font-family: Graphik,"Helvetica Neue",sans-serif;
   font-style: normal;
-  letter-spacing: -.16px;
-  font-size: 10px;
-  line-height: 12px;
-  font-weight: 600;
+  letter-spacing: -.016rem;
+  font-size: .95rem;
+  line-height: .9rem;
+  font-weight: 750;
   color: rgba(12,11,8,.75);
+  padding-bottom: .75rem;
 }

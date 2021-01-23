@@ -1,5 +1,5 @@
 .preview {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
+  min-width: 400px;
+  min-height: 700px;
+  position: absolute;
 }
