@@ -28,7 +28,7 @@ const ItemInfo = (props) => {
       <span className={styles.brand}>{props.info.brand}</span>
       <div className={styles.name}>{props.info.name}</div>
       <div>
-        <Stars />
+        <Stars avg_rating={avg_rating}/>
         <span className={styles.avg_rating}>{avg_rating}</span>
         <span className={styles.num_ratings}>({props.info.num_ratings})</span>
         <span className={styles.item_number}>Item # {props.info.id.toString().padStart(6, '0')}</span>

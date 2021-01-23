@@ -1,0 +1,48 @@
+.star_wrapper {
+  position: relative;
+  vertical-align: middle;
+}
+
+.empty_star {
+  position: static;
+  max-width: 15px;
+  max-height: auto;
+}
+
+.full_star {
+  position: static;
+  max-width: 15px;
+  max-height: auto;
+}
+
+.partial_star_container {
+  min-width: 15px;
+  max-width: 15px;
+  min-height: 15px;
+  max-height: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.partial_star_empty {
+  max-width: 15px;
+  max-height: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.partial_star_fill {
+  max-width: 15px;
+  max-height: auto;
+  object-fit: cover;
+  position: absolute;
+}
+
+.fill_container {
+  position: relative;
+  min-height: 15px;
+  max-height: 15px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

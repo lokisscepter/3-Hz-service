@@ -22,7 +22,8 @@ class App extends React.Component {
       sizes: [],
       photos: [],
       current_style: {},
-      current_size: ''
+      current_size: '',
+      quantity: 1
     };
 
     this.fetchInfo = this.fetchInfo.bind(this);
@@ -32,6 +33,10 @@ class App extends React.Component {
 
     this.clickStyle = this.clickStyle.bind(this);
     this.clickSize = this.clickSize.bind(this);
+
+    this.decQuantity = this.decQuantity.bind(this);
+    this.incQuantity = this.incQuantity.bind(this);
+    this.changeQuantity = this.changeQuantity.bind(this);
   }
 
   randInt(min, max) {
@@ -107,6 +112,29 @@ class App extends React.Component {
     });
   }
 
+  decQuantity() {
+    if (this.state.quantity > 1) {
+      this.setState({
+        quantity: this.state.quantity - 1
+      })
+    }
+  }
+
+  incQuantity() {
+    this.setState({
+      quantity: this.state.quantity + 1
+    })
+  }
+
+  changeQuantity(e) {
+    let val = Number(e.target.value);
+    if (!isNaN(val)) {
+      this.setState({
+        quantity: val
+      })
+    }
+  }
+
   render() {
     return (
       <div className={styles.app}>
@@ -122,6 +150,10 @@ class App extends React.Component {
           clickStyle={this.clickStyle}
           current_size={this.state.current_size}
           clickSize={this.clickSize}
+          quantity={this.state.quantity}
+          decQuantity={this.decQuantity}
+          incQuantity={this.incQuantity}
+          changeQuantity={this.changeQuantity}
         />
       </div>
     );
