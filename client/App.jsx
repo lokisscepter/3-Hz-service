@@ -26,9 +26,9 @@ class App extends React.Component {
       quantity: 1,
       carousel_rotation: 0,
       c_i: 0,
-      // preview: 'hidden',
-      // posX: 0,
-      // posY: 0
+      preview: 'hidden',
+      posX: 0,
+      posY: 0
     };
 
     this.fetchInfo = this.fetchInfo.bind(this);
@@ -43,8 +43,8 @@ class App extends React.Component {
     this.incQuantity = this.incQuantity.bind(this);
     this.changeQuantity = this.changeQuantity.bind(this);
 
-    // this.zoomIn = this.zoomIn.bind(this);
-    // this.zoomOut = this.zoomOut.bind(this);
+    this.zoomIn = this.zoomIn.bind(this);
+    this.zoomOut = this.zoomOut.bind(this);
   }
 
   randInt(min, max) {
@@ -143,24 +143,24 @@ class App extends React.Component {
     }
   }
 
-  // zoomIn(e) {
-  //   console.log('in');
-  //   console.log(e);
-  //   let posX = e.nativeEvent.offsetX;
-  //   let posY = e.nativeEvent.offsetY;
-  //   this.setState({
-  //     preview: 'visible',
-  //     posX: posX,
-  //     posY: posY
-  //   })
-  // }
+  zoomIn(e) {
+    //console.log('in');
+    //console.log(e);
+    let posX = e.nativeEvent.offsetX;
+    let posY = e.nativeEvent.offsetY;
+    this.setState({
+      preview: 'visible',
+      posX: posX,
+      posY: posY
+    })
+  }
 
-  // zoomOut(e) {
-  //   console.log('out');
-  //   this.setState({
-  //     preview: 'hidden'
-  //   })
-  // }
+  zoomOut(e) {
+    //console.log('out');
+    this.setState({
+      preview: 'hidden'
+    })
+  }
 
   render() {
     return (
@@ -174,11 +174,11 @@ class App extends React.Component {
           zoomOut={this.zoomOut}
         />
         <Checkout
-          // photos={this.state.photos}
-          // c_i={this.state.c_i}
-          // preview={this.state.preview}
-          // posX={this.state.posX}
-          // posY={this.state.posY}
+          photos={this.state.photos}
+          c_i={this.state.c_i}
+          preview={this.state.preview}
+          posX={this.state.posX}
+          posY={this.state.posY}
 
           info={this.state.info}
           styles={this.state.styles}

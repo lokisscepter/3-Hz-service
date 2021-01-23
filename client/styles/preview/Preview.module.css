@@ -1,5 +1,7 @@
 .preview {
-  min-width: 400px;
-  min-height: 700px;
+  width: 400px;
+  height: 700px;
   position: absolute;
+  background-color: white;
+  background-repeat: no-repeat;
 }

@@ -13,7 +13,7 @@ const Checkout = (props) => {
   return (
     <div className={styles.container}>
 
-      {/* <Preview photos={props.photos} c_i={props.c_i} current_style={props.current_style} preview={props.preview} posX={props.posX} posY={props.posY}/> */}
+      <Preview photos={props.photos} c_i={props.c_i} current_style={props.current_style} preview={props.preview} posX={props.posX} posY={props.posY}/>
 
       <ItemInfo info={props.info} avg_rating={props.avg_rating} num_ratings={props.num_ratings} styles={props.styles}/>
 

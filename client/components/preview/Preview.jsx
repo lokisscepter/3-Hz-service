@@ -12,7 +12,7 @@ const Preview = (props) => {
       style={{
         backgroundImage: `url(${photo.url_regular})`,
         visibility: props.preview,
-        backgroundPosition: `${props.posX * 7.5}px ${props.posY * 5}px`
+        backgroundPosition: `-${props.posX}px -${props.posY}px`
       }}
     ></div>
   )
