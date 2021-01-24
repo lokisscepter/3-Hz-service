@@ -24,7 +24,6 @@ class App extends React.Component {
       current_style: {},
       current_size: '',
       quantity: 1,
-      carousel_rotation: 0,
       c_i: 0,
       preview: 'hidden',
       posX: 0,
@@ -45,6 +44,8 @@ class App extends React.Component {
 
     this.zoomIn = this.zoomIn.bind(this);
     this.zoomOut = this.zoomOut.bind(this);
+
+    this.clickCarouselImage = this.clickCarouselImage.bind(this);
   }
 
   randInt(min, max) {
@@ -110,7 +111,8 @@ class App extends React.Component {
 
   clickStyle(style) {
     this.setState({
-      current_style: style
+      current_style: style,
+      c_i: 0
     });
   }
 
@@ -144,8 +146,6 @@ class App extends React.Component {
   }
 
   zoomIn(e) {
-    //console.log('in');
-    //console.log(e);
     let posX = e.nativeEvent.offsetX;
     let posY = e.nativeEvent.offsetY;
     this.setState({
@@ -156,10 +156,23 @@ class App extends React.Component {
   }
 
   zoomOut(e) {
-    //console.log('out');
     this.setState({
       preview: 'hidden'
     })
+  }
+
+  clickCarouselImage(c_i) {
+    this.setState({
+      c_i: c_i
+    })
+  }
+
+  carouselScrollLeft() {
+    document.getElementById('carousel').scrollLeft -= 600;
+  }
+
+  carouselScrollRight() {
+    document.getElementById('carousel').scrollLeft += 600;
   }
 
   render() {
@@ -168,10 +181,12 @@ class App extends React.Component {
         <ImagePreview
           photos={this.state.photos}
           current_style={this.state.current_style}
-          carousel_rotation={this.state.carousel_rotation}
           c_i={this.state.c_i}
           zoomIn={this.zoomIn}
           zoomOut={this.zoomOut}
+          clickCarouselImage={this.clickCarouselImage}
+          carouselScrollLeft={this.carouselScrollLeft}
+          carouselScrollRight={this.carouselScrollRight}
         />
         <Checkout
           photos={this.state.photos}

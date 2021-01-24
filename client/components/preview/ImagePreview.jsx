@@ -10,7 +10,7 @@ const ImagePreview = (props) => {
   return (
     <div className={styles.image_preview}>
       <Zoom photo={current_photos[props.c_i]} zoomIn={props.zoomIn} zoomOut={props.zoomOut}/>
-      <Carousel photos={current_photos} c_i={props.c_i} carousel_rotation={props.carousel_rotation}/>
+      <Carousel photos={current_photos} c_i={props.c_i} clickCarouselImage={props.clickCarouselImage} carouselScrollLeft={props.carouselScrollLeft} carouselScrollRight={props.carouselScrollRight}/>
     </div>
   );
 }
