@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import styles from './App.module.css';
 
-import Preview from './components/preview/Preview.jsx';
+import ImagePreview from './components/preview/ImagePreview.jsx';
 import Checkout from './components/checkout/Checkout.jsx';
 
 class App extends React.Component {
@@ -23,7 +23,12 @@ class App extends React.Component {
       photos: [],
       current_style: {},
       current_size: '',
-      quantity: 1
+      quantity: 1,
+      carousel_rotation: 0,
+      c_i: 0,
+      preview: 'hidden',
+      posX: 0,
+      posY: 0
     };
 
     this.fetchInfo = this.fetchInfo.bind(this);
@@ -37,6 +42,9 @@ class App extends React.Component {
     this.decQuantity = this.decQuantity.bind(this);
     this.incQuantity = this.incQuantity.bind(this);
     this.changeQuantity = this.changeQuantity.bind(this);
+
+    this.zoomIn = this.zoomIn.bind(this);
+    this.zoomOut = this.zoomOut.bind(this);
   }
 
   randInt(min, max) {
@@ -135,14 +143,43 @@ class App extends React.Component {
     }
   }
 
+  zoomIn(e) {
+    //console.log('in');
+    //console.log(e);
+    let posX = e.nativeEvent.offsetX;
+    let posY = e.nativeEvent.offsetY;
+    this.setState({
+      preview: 'visible',
+      posX: posX,
+      posY: posY
+    })
+  }
+
+  zoomOut(e) {
+    //console.log('out');
+    this.setState({
+      preview: 'hidden'
+    })
+  }
+
   render() {
     return (
       <div className={styles.app}>
-        <Preview
+        <ImagePreview
           photos={this.state.photos}
           current_style={this.state.current_style}
+          carousel_rotation={this.state.carousel_rotation}
+          c_i={this.state.c_i}
+          zoomIn={this.zoomIn}
+          zoomOut={this.zoomOut}
         />
         <Checkout
+          photos={this.state.photos}
+          c_i={this.state.c_i}
+          preview={this.state.preview}
+          posX={this.state.posX}
+          posY={this.state.posY}
+
           info={this.state.info}
           styles={this.state.styles}
           sizes={this.state.sizes}

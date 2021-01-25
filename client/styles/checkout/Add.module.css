@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 400;
   letter-spacing: -.016rem;
-  font-size: 11px;
+  font-size: 1rem;
   line-height: 1.5;
   color: rgba(51, 49, 44, 0.75);
   box-sizing: inherit;
@@ -35,7 +35,7 @@
   font-weight: 400;
   letter-spacing: -.016rem;
   font-family: Graphik,"Helvetica Neue",sans-serif;
-  font-size: 11px;
+  font-size: 1rem;
   line-height: inherit;
   align-items: center;
   background-color: transparent;
@@ -68,7 +68,7 @@
   font-weight: 500;
   letter-spacing: -.08px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 22px;
   border: none;
   border-radius: 4px;
@@ -80,13 +80,14 @@
   color: #f9f8f6;
   fill: #f9f8f6;
   text-align: center;
+  padding: .5rem;
 }
 
 .wish_registry_container {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: .6rem;
 }
 
 .wish_registry_button {
@@ -106,7 +107,7 @@
   color: #4e4d49;
   fill: #928b80;
   font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 10px;
+  font-size: .8rem;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -.08px;
@@ -114,4 +115,5 @@
   flex-grow: 1;
   vertical-align: top;
   text-align: center;
+  padding: .5rem;
 }

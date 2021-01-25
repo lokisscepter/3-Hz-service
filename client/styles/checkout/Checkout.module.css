@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-width: 200px;
-  max-width: 200px;
+  max-width: 350px;
 }
 
 .item_selector {
@@ -26,7 +26,7 @@
   letter-spacing: -.016rem;
   text-align: center;
   font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 12px;
   align-items: center;
   background-color: transparent;

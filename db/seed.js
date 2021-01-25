@@ -51,7 +51,7 @@ const generatePhotos = (styles) => {
     let numPhotos = rI(4, 12);
     for (let i = 0; i < numPhotos; i++) {
       photo_id++;
-      let randomPhoto = photoBank[rI(0, 35)];
+      let randomPhoto = photoBank[rI(0, 37)];
       let photo = {
         photo_id: photo_id,
         url_thumbnail: randomPhoto.urls.thumb,

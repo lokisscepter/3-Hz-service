@@ -5,11 +5,11 @@
   display: inline;
   fill: rgb(64, 110, 181);
   font-family: Graphik, sans-serif;
-  font-size: 10px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   height: auto;
-  letter-spacing: -0.16px;
+  letter-spacing: -.016rem;
   line-height: 25.6px;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -20,12 +20,14 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
-  letter-spacing: -.16px;
-  font-family: Stuart, Georgia, serif;
+  letter-spacing: -.05rem;
+  font-family: Stuart,Georgia,serif;
   font-weight: 600;
-  font-size: 20px;
   color: #2e2e2e;
+  font-size: 1.8rem;
   line-height: 1.3!important;
+  box-sizing: inherit;
+  margin-bottom: .5rem;
 }
 
 .avg_rating {
@@ -36,13 +38,12 @@
   color: #3278ae;
   font-family: Graphik,"Helvetica Neue",sans-serif;
   font-style: normal;
-  letter-spacing: -.016rem;
-  font-size: 10px;
-  line-height: 18px;
+  letter-spacing: -.05rem;
+  font-size: 1rem;
   font-weight: 600;
   border-right: .1rem solid #b2ab9f;
-  padding: 0 4px;
-  margin-right: 4px;
+  padding: 0 .4rem;
+  margin-right: .4rem;
 }
 
 .num_ratings {
@@ -54,9 +55,9 @@
   font-family: Graphik,"Helvetica Neue",sans-serif;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -.016rem;
-  font-size: 10px;
-  line-height: 18px;
+  letter-spacing: -.05rem;
+  font-size: 1rem;
+  line-height: 1rem;
   box-sizing: inherit;
 }
 
@@ -64,11 +65,11 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
-  font-weight: 400;
-  letter-spacing: -.016rem;
-  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: -.05rem;
+  font-size: 1rem;
   color: #2e2e2e;
-  font-family: "Roboto Condensed",Roboto;
+  font-family: "Roboto Condensed",Roboto, sans-serif;
   padding-top: 5px;
   float: right;
 }
@@ -78,11 +79,11 @@
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   text-align: left;
-  font-weight: 700;
+  font-weight: 1000;
   white-space: nowrap;
   color: #2e2e2e;
   line-height: 1.4;
-  font-family: Stuart, serif;
-  letter-spacing: -.016rem;
-  font-size: 16px;
+  font-family: Graphik, serif;
+  letter-spacing: -.05rem;
+  font-size: 1.4rem;
 }
