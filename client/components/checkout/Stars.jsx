@@ -31,7 +31,7 @@ const Stars = (props) => {
             <img className={styles.empty_star} src={empty_star} key={n + "e"}/>
           )
         } else if (fill < 1) {
-          let width = fill * 15;
+          let width = fill * 18;
           return (
             <div className={styles.partial_star_container} key={n + "p"}>
               <img className={styles.partial_star_empty} src={empty_star}/>
