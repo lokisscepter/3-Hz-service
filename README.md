@@ -1,13 +1,12 @@
-# Project Name
+# REI Item Product Page
 
-> Project description
+> Item Checkout and Preview Module
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/lokisscepter/bschaaf1017-service
+  - https://github.com/lokisscepter/sq-service
+  - https://github.com/lokisscepter/pvl-service
 
 ## Table of Contents
 
@@ -17,23 +16,26 @@
 
 ## Usage
 
-> Some usage instructions
+This project uses MySQL
+
+> `npm run seed-db` to seed database
+
+Webpack is used to bundle the application
+
+> `npm run webpack-prod` to build production version of service
+
+The service is run using an express server, listening on port 6969
+
+> `npm run start-prod` to start the service
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
+Dependencies are specified in `package.json`
 
 ### Installing Dependencies
 
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
-
