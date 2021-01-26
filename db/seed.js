@@ -129,7 +129,8 @@ const randomStyles = generateStyles(randomItems);
 const randomPhotos = generatePhotos(randomStyles);
 const randomSizes = generateSizes(randomStyles);
 
-m.dropDatabase()
+  m.connect()
+  .then(() => m.dropDatabase())
   .then(() => m.createSchema())
   .catch(() => m.createSchema())
   .then(() => addItems(randomItems))

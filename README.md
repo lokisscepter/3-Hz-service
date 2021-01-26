@@ -18,6 +18,8 @@
 
 This project uses MySQL
 
+> Edit `db/db.config.js` with your MySQL credentials
+
 > `npm run seed-db` to seed database
 
 Webpack is used to bundle the application
