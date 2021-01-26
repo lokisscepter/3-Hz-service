@@ -7,7 +7,8 @@ const m = new Model;
 
 const app = express();
 
-m.connect();
+m.connect()
+  .then(() => m.useDB());
 
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, '../public')));
