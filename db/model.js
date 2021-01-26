@@ -9,14 +9,12 @@ class Model {
       INSERT INTO items (name, brand, avg_rating, num_ratings)
       VALUES (?, ?, ?, ?)
     `;
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, values));
+    return db.queryAsync(queryString, values);
   }
 
   getItem(item_id) {
     let queryString = `SELECT * FROM items WHERE id = ?`;
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, item_id));
+    return db.queryAsync(queryString, item_id);
   }
 
   addStyle(color, price, item_id) {
@@ -25,14 +23,12 @@ class Model {
       INSERT INTO styles (color, price, item_id)
       VALUES (?, ?, ?)
     `;
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, values));
+    return db.queryAsync(queryString, values);
   }
 
   getStyles(item_id) {
     let queryString = `SELECT * FROM styles WHERE item_id = ?`;
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, item_id));
+    return db.queryAsync(queryString, item_id);
   }
 
   addSize(size, style_id, item_id) {
@@ -41,14 +37,12 @@ class Model {
       INSERT INTO sizes (size, style_id, item_id)
       VALUES (?, ?, ?)
     `;
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, values));
+    return db.queryAsync(queryString, values);
   }
 
   getSizes(item_id) {
     let queryString = `SELECT * FROM sizes WHERE item_id = ?`
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, item_id));
+    return db.queryAsync(queryString, item_id);
   }
 
   addPhoto(url_thumbnail, url_regular, url_full, c_i, style_id, item_id) {
@@ -57,14 +51,12 @@ class Model {
       INSERT INTO photos (url_thumbnail, url_regular, url_full, c_i, style_id, item_id)
       VALUES (?, ?, ?, ?, ?, ?)
     `;
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, values));
+    return db.queryAsync(queryString, values);
   }
 
   getPhotos(item_id) {
     let queryString = `SELECT * FROM photos WHERE item_id = ?`
-    return db.queryAsync(`USE ${database}`)
-      .then(() => db.queryAsync(queryString, item_id));
+    return db.queryAsync(queryString, item_id);
   }
 
   dropDatabase() {
@@ -115,6 +107,10 @@ class Model {
           FOREIGN KEY (item_id) REFERENCES items(id)
         )
       `))
+  }
+
+  useDB() {
+    return db.queryAsync(`USE ${database}`);
   }
 
   connect() {
