@@ -30,6 +30,10 @@ The service is run using an express server, listening on port 6969
 
 > `npm run start-prod` to start the service
 
+This service renders to the DOM Node `item_preview_checkout` and is bundled to `bundle.js`
+
+> Include a `div` element on the proxy server with the id `item_preview_checkout` along with a script element with src `http://localhost:6969/bundle.js` to render the service
+
 ## Requirements
 
 Dependencies are specified in `package.json`

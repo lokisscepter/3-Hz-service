@@ -177,36 +177,40 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={styles.app}>
-        <ImagePreview
-          photos={this.state.photos}
-          current_style={this.state.current_style}
-          c_i={this.state.c_i}
-          zoomIn={this.zoomIn}
-          zoomOut={this.zoomOut}
-          clickCarouselImage={this.clickCarouselImage}
-          carouselScrollLeft={this.carouselScrollLeft}
-          carouselScrollRight={this.carouselScrollRight}
-        />
-        <Checkout
-          photos={this.state.photos}
-          c_i={this.state.c_i}
-          preview={this.state.preview}
-          posX={this.state.posX}
-          posY={this.state.posY}
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
+          <div className={styles.app}>
+            <ImagePreview
+              photos={this.state.photos}
+              current_style={this.state.current_style}
+              c_i={this.state.c_i}
+              zoomIn={this.zoomIn}
+              zoomOut={this.zoomOut}
+              clickCarouselImage={this.clickCarouselImage}
+              carouselScrollLeft={this.carouselScrollLeft}
+              carouselScrollRight={this.carouselScrollRight}
+            />
+            <Checkout
+              photos={this.state.photos}
+              c_i={this.state.c_i}
+              preview={this.state.preview}
+              posX={this.state.posX}
+              posY={this.state.posY}
 
-          info={this.state.info}
-          styles={this.state.styles}
-          sizes={this.state.sizes}
-          current_style={this.state.current_style}
-          clickStyle={this.clickStyle}
-          current_size={this.state.current_size}
-          clickSize={this.clickSize}
-          quantity={this.state.quantity}
-          decQuantity={this.decQuantity}
-          incQuantity={this.incQuantity}
-          changeQuantity={this.changeQuantity}
-        />
+              info={this.state.info}
+              styles={this.state.styles}
+              sizes={this.state.sizes}
+              current_style={this.state.current_style}
+              clickStyle={this.clickStyle}
+              current_size={this.state.current_size}
+              clickSize={this.clickSize}
+              quantity={this.state.quantity}
+              decQuantity={this.decQuantity}
+              incQuantity={this.incQuantity}
+              changeQuantity={this.changeQuantity}
+            />
+          </div>
+        </div>
       </div>
     );
   }
