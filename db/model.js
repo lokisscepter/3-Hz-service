@@ -1,5 +1,5 @@
 const db = require('./db.js');
-
+const database = 'item_preview_checkout';
 
 class Model {
 
@@ -9,13 +9,13 @@ class Model {
       INSERT INTO items (name, brand, avg_rating, num_ratings)
       VALUES (?, ?, ?, ?)
     `;
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, values));
   }
 
   getItem(item_id) {
     let queryString = `SELECT * FROM items WHERE id = ?`;
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, item_id));
   }
 
@@ -25,13 +25,13 @@ class Model {
       INSERT INTO styles (color, price, item_id)
       VALUES (?, ?, ?)
     `;
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, values));
   }
 
   getStyles(item_id) {
     let queryString = `SELECT * FROM styles WHERE item_id = ?`;
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, item_id));
   }
 
@@ -41,13 +41,13 @@ class Model {
       INSERT INTO sizes (size, style_id, item_id)
       VALUES (?, ?, ?)
     `;
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, values));
   }
 
   getSizes(item_id) {
     let queryString = `SELECT * FROM sizes WHERE item_id = ?`
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, item_id));
   }
 
@@ -57,23 +57,23 @@ class Model {
       INSERT INTO photos (url_thumbnail, url_regular, url_full, c_i, style_id, item_id)
       VALUES (?, ?, ?, ?, ?, ?)
     `;
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, values));
   }
 
   getPhotos(item_id) {
     let queryString = `SELECT * FROM photos WHERE item_id = ?`
-    return db.queryAsync(`USE fec`)
+    return db.queryAsync(`USE ${database}`)
       .then(() => db.queryAsync(queryString, item_id));
   }
 
   dropDatabase() {
-    return db.queryAsync(`DROP DATABASE fec`);
+    return db.queryAsync(`DROP DATABASE ${database}`);
   }
 
   createSchema() {
-    return db.queryAsync(`CREATE DATABASE IF NOT EXISTS fec`)
-      .then(() => db.queryAsync(`USE fec`))
+    return db.queryAsync(`CREATE DATABASE IF NOT EXISTS ${database}`)
+      .then(() => db.queryAsync(`USE ${database}`))
       .then(() => db.queryAsync(`
         CREATE TABLE IF NOT EXISTS items (
           id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
