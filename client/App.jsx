@@ -53,7 +53,7 @@ class App extends React.Component {
   }
 
   fetchInfo(item_id) {
-    return axios.get(`http://localhost:6969/api/items/${item_id}/info`)
+    return axios.get(`http://18.189.16.237:6969/api/items/${item_id}/info`)
       .then(response => {
         let item = response.data[0];
         this.setState({
@@ -69,7 +69,7 @@ class App extends React.Component {
   }
 
   fetchStyles(item_id) {
-    return axios.get(`http://localhost:6969/api/items/${item_id}/styles`)
+    return axios.get(`http://18.189.16.237:6969/api/items/${item_id}/styles`)
       .then(response => {
         let styles = response.data;
         this.setState({
@@ -80,7 +80,7 @@ class App extends React.Component {
   }
 
   fetchSizes(item_id) {
-    return axios.get(`http://localhost:6969/api/items/${item_id}/sizes`)
+    return axios.get(`http://18.189.16.237:6969/api/items/${item_id}/sizes`)
       .then(response => {
         let sizes = response.data;
         this.setState({
@@ -90,7 +90,7 @@ class App extends React.Component {
   }
 
   fetchPhotos(item_id) {
-    return axios.get(`http://localhost:6969/api/items/${item_id}/photos`)
+    return axios.get(`http://18.189.16.237:6969/api/items/${item_id}/photos`)
       .then(response => {
         let photos = response.data;
         this.setState({
