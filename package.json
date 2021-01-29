@@ -12,7 +12,7 @@
     "webpack-prod": "webpack --config prod.config.js",
     "start-dev": "nodemon server/index.js",
     "start-prod": "pm2 start server/index.js -i max",
-    "stop-prod": "pm2 stop index.js",
+    "stop-prod": "pm2 stop server/index.js",
     "seed-db": "node db/seed.js",
     "test": "jest --verbose"
   },
