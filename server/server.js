@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const Model = require('../db/model.js');
 const cors = require('cors');
+const compression = require('compression');
 
 const m = new Model;
 
@@ -11,6 +12,7 @@ m.connect()
   .then(() => m.useDB());
 
 app.use(cors());
+app.use(compression());
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.get('/api/items/:item_id/info', (req, res) => {
