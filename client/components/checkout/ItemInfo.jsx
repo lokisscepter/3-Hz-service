@@ -6,7 +6,7 @@ import Stars from './Stars.jsx';
 const ItemInfo = (props) => {
 
   let avg_rating = parseFloat(props.info.avg_rating.slice(0, 1) + '.' + props.info.avg_rating.slice(1, 2)).toFixed(1);
-
+  debugger;
   let min_price = Math.min.apply(Math, props.styles.map((style) => style.price));
   min_price = min_price.toString();
   min_price = parseFloat(min_price.slice(0, min_price.length - 2) + '.' + min_price.slice(min_price.length - 2, min_price.length)).toFixed(2);

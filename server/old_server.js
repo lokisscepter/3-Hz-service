@@ -1,11 +1,14 @@
 const express = require('express');
 const path = require('path');
+const Model = require('../db/model.js');
 const cors = require('cors');
-const Sequelize = require('sequelize')
+
+const m = new Model;
 
 const app = express();
 
-const db = new Sequelize('postgres://student:student@localhost:6969/products')
+m.connect()
+  .then(() => m.useDB());
 
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, '../public')));
